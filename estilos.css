@@ -1,0 +1,28 @@
+
+*{box-sizing: border-box;}
+body {
+    background: linear-gradient(to right, #09203f 0%,#537895 100%);
+}
+.main{
+    margin-top: 15%;
+}
+
+.Titulo{
+    text-align: center;
+    font-size: 35px;
+    font-style: oblique;
+}
+
+.practico{
+    height: 50px;
+    padding: 5px 50px;
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+.teorico{
+    height: 50px;
+    padding: 5px 50px;
+    margin-left: 30%;
+    font-weight: bold;
+}
