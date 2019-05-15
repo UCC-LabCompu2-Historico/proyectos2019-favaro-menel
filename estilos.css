@@ -8,13 +8,11 @@ body{
 }
 
 #titulo{
-    position: relative;
-    right: -3em;
-    margin-left: 10%;
+    text-align: center;
     font-size: 30px;
     font-style: oblique;
 }
-
+/*Botón Práctico*/
 .practico{
     height: 50px;
     padding: 5px 50px;
@@ -22,7 +20,7 @@ body{
     font-weight: bold;
     margin-top: 10%;
 }
-
+/*Botón Teórico*/
 .teorico{
     height: 50px;
     padding: 5px 50px;
@@ -36,12 +34,31 @@ body{
 }
 
 .grafico{
-    position: relative;
-    top: -10em;
+    position: absolute;
+    top: 10em;
     width: 40em;
     height: 25em;
     margin-left: 30%;
     margin-right: 10%;
     border: 1px solid;
     background-color: white;
+}
+
+.desarrollo{
+    position: absolute;
+    color: white;
+    margin-left: 3em;
+    margin-top: 20px;
+    font-size: 20px;
+}
+a:link{
+    color: white;
+}
+a:visited{
+    color:white;
+}
+.volver{
+    position: fixed;
+    bottom: 1em;
+    font-size: 20px;
 }
