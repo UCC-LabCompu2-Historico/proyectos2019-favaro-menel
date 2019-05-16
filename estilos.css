@@ -4,7 +4,7 @@
 }
 
 body{
-    background: linear-gradient(to right, #09203f 0%,#537895 100%);
+    background-image: linear-gradient(to right, #13547a 0%, #80d0c7 100%);
 }
 
 #titulo{
@@ -29,11 +29,28 @@ body{
     margin-top: 10%;
 }
 
-.inputPractico{
+.input{
     margin-left: 5%;
 }
 
-.grafico{
+.output {
+    margin-left: 5%;
+}
+
+/*Gráfico del práctico*/
+.graficop{
+    position: absolute;
+    top: 10em;
+    width: 40em;
+    height: 25em;
+    margin-left: 30%;
+    margin-right: 10%;
+    border: 1px solid;
+    background-color: white;
+}
+
+/*Gráfico del teórico*/
+.graficot{
     position: absolute;
     top: 10em;
     width: 40em;
@@ -61,4 +78,13 @@ a:visited{
     position: fixed;
     bottom: 1em;
     font-size: 20px;
+}
+
+.opciones{
+    border: 1px solid;
+    background-color: white;
+    padding: 5px;
+    width: 13em;
+    margin-left: 10%;
+    margin-top: 10%;
 }
