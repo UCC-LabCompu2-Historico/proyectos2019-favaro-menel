@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: linear-gradient(to right, #13547a 0%, #80d0c7 100%);
+    background-color: cadetblue;
 }
 
 #titulo{
@@ -38,16 +38,6 @@ body{
 }
 
 /*Gráfico del práctico*/
-.graficop{
-    position: absolute;
-    top: 10em;
-    width: 40em;
-    height: 25em;
-    margin-left: 30%;
-    margin-right: 10%;
-    border: 1px solid;
-    background-color: white;
-}
 
 /*Gráfico del teórico*/
 .graficot{
@@ -61,7 +51,7 @@ body{
     background-color: white;
 }
 
-.desarrollo{
+#desarrollo{
     position: absolute;
     color: white;
     margin-left: 3em;
@@ -74,6 +64,9 @@ a:link{
 a:visited{
     color:white;
 }
+a:hover{
+    font-size: 1.2em;
+}
 .volver{
     position: fixed;
     bottom: 1em;
@@ -81,7 +74,7 @@ a:visited{
 }
 
 .opciones{
-    padding: 10px;
+    padding: 20px;
     margin: 10%;
     width: 13em;
 }
@@ -90,7 +83,10 @@ a:visited{
     text-align: center;
 }
 
+/*Grafico del desarrollo*/
 .graficod{
+    position: absolute;
+    top: 15em;
     margin-left: 22%;
     background-color: white;
     width: 45em;
