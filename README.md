@@ -15,8 +15,8 @@ Usamos git para el versionado. Para todas las versiones disponibles, mira los ta
 
 Autores
 
-Menel Angelo.
 Favaro Juan Cruz.
+Menel Angelo
 
 Universidad
 
