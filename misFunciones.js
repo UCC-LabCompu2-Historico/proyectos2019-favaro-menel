@@ -28,16 +28,31 @@ function mostrar_ocultar(id_elem) {
 function dibujargrilla() {
     var canvas=document.getElementById("mycanvas");
     var ctx=canvas.getContext("2d");
-    ctx.fillStyle="#000";
+
     ctx.beginPath();
     ctx.moveTo(0,canvas.height/2);
+    ctx.strokeStyle="#000";
     ctx.lineTo(canvas.width, canvas.height/2);
+    ctx.stroke();
+
     ctx.moveTo(canvas.width/2,0);
+    ctx.strokeStyle="#000";
     ctx.lineTo(canvas.width/2,canvas.height);
     ctx.stroke();
-    ctx.fillStyle="#9c9c9c";
-    ctx.beginPath();
-    ctx.moveTo(10,10);
-    ctx.lineTo(50,50);
     ctx.closePath();
+
+    ctx.beginPath();
+    for(let i=0;i<canvas.height;i+=10){
+        ctx.moveTo(0,i+10);
+        ctx.strokeStyle="#9c9c9c";
+        ctx.lineTo(canvas.width,i+10);
+        ctx.stroke();
+    }
+    for(let t=0;t<canvas.width;t+=10){
+        ctx.moveTo(t+10,0);
+        ctx.strokeStyle="#9c9c9c";
+        ctx.lineTo(t+10,canvas.height);
+        ctx.stroke();
+    }
+    ctx.closePath()
 }
