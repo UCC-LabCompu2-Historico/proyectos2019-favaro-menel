@@ -6,7 +6,7 @@
     <script type="text/javascript" src="misFunciones.js"></script>
     <title>Práctico</title>
 </head>
-<body>
+<body onload="dibujargrilla()">
     <div id="titulo">
         <header>
             <h1>Sistema de ecuaciones</h1>
@@ -49,10 +49,8 @@
     <div id="desarrollo">
         <a href="desarrollo.html">+Ver Desarrollo</a>
     </div>
-    <div class="graficot">
-        <canvas>
+        <canvas id="mycanvas" class="graficot" width="640" height="400">
         </canvas>
-    </div>
     <div class="volver">
         <a href="inicio.html">Inicio</a>
     </div>
