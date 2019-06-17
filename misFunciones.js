@@ -25,3 +25,5 @@ function mostrar_ocultar(id_elem) {
         document.getElementById("tresRes").style.display='block';
     }
 }
+
+//Texto Canvas
