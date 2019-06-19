@@ -4,15 +4,51 @@ function ecuacion(){
     var a = Number(document.rellenar.vc.value);
     var b = Number(document.rellenar.vl.value);
     var c = Number(document.rellenar.vi.value);
+    var d;
 
-    var x1 = (-1*b+(Math.sqrt((Math.pow(b,2)-(4*a*c)))))/(2*a);
-    var x2 = (-1*b-(Math.sqrt((Math.pow(b,2)-(4*a*c)))))/(2*a);
+    if (a==0)
+    {
+        var x1= (-c)/b;
+        var x2=0;
+    }
+    else {
+        d=b*b-4*a*c;
+        if(d>0)
+        {
+            var x1 = (-b+(Math.sqrt(d)))/(2*a);
+            var x2 = (-b-(Math.sqrt(d)))/(2*a);
+        }
+        if(d==0)
+        {
+            var x1= (-b)/2*a;
+            var x2= (-b)/2*a;
+        }
+        if (d<0)
+        {
+            var x1=0;
+            var x2=0;
+        }
+    }
 
     document.getElementById("x1").value = x1;
     document.getElementById("x2").value = x2;
 }
 
-
+function dibujarfuncion() {
+    var canvas=document.getElementById("mycanvas");
+    var ctx=canvas.getContext("2d");
+    /*var y;
+    var a = Number(document.rellenar.vc.value);
+    var b = Number(document.rellenar.vl.value);
+    var c = Number(document.rellenar.vi.value);*/
+    ctx.beginPath();
+    ctx.moveTo(50,20);
+    ctx.quadraticCurveTo(20,100,200,20);
+    ctx.lineWidth= 5;
+    ctx.strokeStyle="#000";
+    ctx.stroke();
+    ctx.closePath();
+}
 //Boton reiniciar
 function reiniciar()
 {
