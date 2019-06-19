@@ -7,50 +7,33 @@
     <title>Práctico</title>
 </head>
 <body onload="dibujargrilla()">
+
     <div id="titulo">
         <header>
             <h1>Sistema de ecuaciones</h1>
         </header>
     </div>
-    <h1>Numero de variables:</h1>
-    <form>
-        <p>
-            <input id="mostrar1" type="radio" name="rad_mostrar-ocultar" value="1_var" onclick="mostrar_ocultar(this.id)">
-            <label for="mostrar1"> 1 </label>
-        </p>
-        <p>
-            <input id="mostrar2" type="radio" name="rad_mostrar-ocultar" value="2_var" onclick="mostrar_ocultar(this.id)">
-            <label for="mostrar2"> 2 </label>
-        </p>
-        <p>
-            <input id="mostrar3" type="radio" name="rad_mostrar-ocultar" value="3_var" onclick="mostrar_ocultar(this.id)">
-            <label for="mostrar3"> 3 </label>
-        </p>
+
+    <form action="#" name="rellenar>
+        <h2>Ingrese las variables:</h2>
+        <div id="variables">
+            <p><input type="text" size="2" id="vc" name="vc"> X<sup>2</sup>+<input type="text" size="2" id="vl" name="vl"> X+<input type="text" size="2" id="vi" name="vi">= <input type="text" size="2" value="0" disabled="disabled"></p>
+    </div>
+    <h1><input type="button" value="Calcular" onclick="ecuacion()"></h1>
     </form>
-    <div name="unDiv" class="input" id="unDiv">
-        <p><input type="text" size="2"> X+<input type="text" size="2"> Y+<input type="text" size="2">Z= <input type="text" size="2" ></p>
-    </div>
-    <div name="dosDiv" class="input" id="dosDiv">
-        <p><input type="text" size="2"> X+<input type="text" size="2"> Y+<input type="text" size="2">Z= <input type="text" size="2"> </p>
-    </div>
-    <div name="tresDiv" class="input" id="tresDiv">
-        <p><input type="text" size="2"> X+<input type="text" size="2"> Y+<input type="text" size="2">Z= <input type="text" size="2"> </p>
-    </div>
+
+
+        <div id="raices" name="rellenar">
         <h3>Resultado:</h3>
-        <div name="unRes" class="output" id="unRes">
-        <p>X1=<input disabled="disabled" size="3"></p>
+        <p>X1=<input disabled="disabled" size="3" id="x1"></p>
+        <p>X2=<input disabled="disabled" size="3" id="x2"></p>
         </div>
-        <div name="dosRes" class="output" id="dosRes">
-        <p>X2=<input disabled="disabled" size="3"></p>
-        </div>
-        <div name="tresRes" class="output" id="tresRes">
-        <p>X3=<input disabled="disabled" size="3"></p>
-        </div>
-    <div id="desarrollo">
-        <a href="desarrollo.html">+Ver Desarrollo</a>
-    </div>
+
         <canvas id="mycanvas" class="graficot" width="640" height="400">
         </canvas>
+
+    <h1><input type="button" value="reiniciar" class="opciones" onclick="reiniciar()"></h1>
+
     <div class="volver">
         <a href="inicio.html">Inicio</a>
     </div>

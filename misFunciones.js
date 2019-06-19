@@ -1,49 +1,28 @@
-//Elegir variables Práctico
-function mostrar_ocultar(id_elem) {
-    if(id_elem=="mostrar1"){
-        document.getElementById("unDiv").style.display = 'block';
-        document.getElementById("dosDiv").style.display= 'none';
-        document.getElementById("tresDiv").style.display= 'none';
-        document.getElementById("unRes").style.display='block';
-        document.getElementById("dosRes").style.display='none';
-        document.getElementById("tresRes").style.display='none';
-    }
-    if(id_elem=="mostrar2"){
-        document.getElementById("unDiv").style.display = 'block';
-        document.getElementById("dosDiv").style.display= 'block';
-        document.getElementById("tresDiv").style.display= 'none';
-        document.getElementById("unRes").style.display='block';
-        document.getElementById("dosRes").style.display='block';
-        document.getElementById("tresRes").style.display='none';
-    }
-    if(id_elem=="mostrar3"){
-        document.getElementById("unDiv").style.display='block';
-        document.getElementById("dosDiv").style.display='block';
-        document.getElementById("tresDiv").style.display='block';
-        document.getElementById("unRes").style.display='block';
-        document.getElementById("dosRes").style.display='block';
-        document.getElementById("tresRes").style.display='block';
-    }
-}
-<<<<<<< HEAD
+function ecuacion(){
+    resultados = document.getElementById("raices");
 
-//Texto Canvas
-=======
+    var a = Number(document.rellenar.vc.value);
+    var b = Number(document.rellenar.vl.value);
+    var c = Number(document.rellenar.vi.value);
+
+    var x1 = (-1*b+(Math.sqrt((Math.pow(b,2)-(4*a*c)))))/(2*a);
+    var x2 = (-1*b-(Math.sqrt((Math.pow(b,2)-(4*a*c)))))/(2*a);
+
+    document.getElementById("x1").value = x1;
+    document.getElementById("x2").value = x2;
+}
+
+
+//Boton reiniciar
+function reiniciar()
+{
+    document.getElementsByName("rellenar").rellenar();
+}
+
+//Grilla
 function dibujargrilla() {
     var canvas=document.getElementById("mycanvas");
     var ctx=canvas.getContext("2d");
-
-    ctx.beginPath();
-    ctx.moveTo(0,canvas.height/2);
-    ctx.strokeStyle="#000";
-    ctx.lineTo(canvas.width, canvas.height/2);
-    ctx.stroke();
-
-    ctx.moveTo(canvas.width/2,0);
-    ctx.strokeStyle="#000";
-    ctx.lineTo(canvas.width/2,canvas.height);
-    ctx.stroke();
-    ctx.closePath();
 
     ctx.beginPath();
     for(let i=0;i<canvas.height;i+=10){
@@ -59,5 +38,16 @@ function dibujargrilla() {
         ctx.stroke();
     }
     ctx.closePath()
+
+    ctx.beginPath();
+    ctx.moveTo(0,canvas.height/2);
+    ctx.strokeStyle="#000";
+    ctx.lineTo(canvas.width, canvas.height/2);
+    ctx.stroke();
+
+    ctx.moveTo(canvas.width/2,0);
+    ctx.strokeStyle="#000";
+    ctx.lineTo(canvas.width/2,canvas.height);
+    ctx.stroke();
+    ctx.closePath();
 }
->>>>>>> 6d5625096d5813ee3b93865a9113609d8937f1ec

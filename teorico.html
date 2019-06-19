@@ -5,25 +5,24 @@
     <title>Teórico</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
-<body>
+<body onclick="teorico(this.id)">
+
     <div id="titulo">
         <header>
             <h1>Sistema de ecuaciones</h1>
         </header>
     </div>
-    <div class="opciones">
-        <select name="Ecuaciones">
-            <option value="sustitucion">Metodo de Sustitucion</option>
-            <option value="igualacion">Metodo de Igualacion</option>
-            <option value="reduccion">Metodo de Reduccion</option>
-        </select>
-    </div>
-    <div class="graficot">
-        <canvas>
+
+    <input type="button" value="Ecuacion cuadratica" class="opciones">
+
+    <div>
+        <canvas id="myCanvas" class="graficot" width="640" height="400">
         </canvas>
     </div>
+
     <div class="volver">
         <a href="inicio.html">Inicio</a>
     </div>
+
 </body>
 </html>
