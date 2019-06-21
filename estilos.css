@@ -110,3 +110,22 @@ a:hover{
 #raices{
     margin-left: 5%;
 }
+#hojablanca{
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    border:2px solid #000000;
+    padding: 30px;
+}
+p{
+    font-family: Roboto;
+}
+ul{
+    font-family: Roboto;
+}
+.imagen{
+    margin: 0 35%;
+}
+h2{
+    text-align: center;
+}

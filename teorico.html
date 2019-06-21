@@ -3,21 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Teórico</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
-<body onclick="teorico(this.id)">
-
+<body>
     <div id="titulo">
         <header>
             <h1>Sistema de ecuaciones</h1>
         </header>
     </div>
-
-    <input type="button" value="Ecuacion cuadratica" class="opciones">
-
-    <div>
-        <canvas id="myCanvas" class="graficot" width="640" height="400">
-        </canvas>
+    <div id="hojablanca">
+        <h2>Ecuaciones de Segundo Grado</h2>
+        <p> La forma general de una ecuación de segundo grado es:</p>
+        <img src="imagenes/formageneral.png" class="imagen">
+        <p>
+            Por comodidad, resolveremos la ecuación de tres formas distintas según los valores de los coeficientes
+            <strong>b</strong> y <strong>c</strong>.
+        </p>
+        <p>
+            Se llama discriminante (Δ) a:
+        </p>
+        <img src="imagenes/discriminante.png" class="imagen">
+        <p>
+            El signo de Δ nos permite conocer el tipo de soluciones de la ecuación:
+        </p>
+        <ul>
+            <li>Si Δ > 0, hay dos soluciones reales distintas.</li>
+            <li>Si Δ = 0, hay dos soluciones reales iguales.</li>
+            <li>Si Δ < 0, no hay soluciones reales (hay dos soluciones complejas distintas).</li>
+        </ul>
+        <h3>Caso 1</h3>
+        <p>Si existe <strong>b</strong> y <strong>c ≠ 0</strong>,entonces la funicon es <i>completa</i> y sus solucion la proporciona
+        la siguiente formula:</p>
+        <img src="imagenes/bascara.png" class="imagen">
+        <h3>Caso 2</h3>
+        <p>Si <strong>b=0</strong>,la ecuacion es <i>incompleta</i> y es la siguiente:</p>
+        <img src="imagenes/ecuacioninc1.png" class="imagen">
+        <p>Y su solucion es:</p>
+        <img src="imagenes/sol1.png" class="imagen">
+        <h3>Caso 3</h3>
+        <p>Si <strong>c=0</strong>, la ecuacion tambien es <i>incompleta</i> y se define:</p>
+        <img src="imagenes/ecuacioninc2.png" class="imagen">
+        <p>Su solucion es:</p>
+        <img src="imagenes/sol2.png" class="imagen">
+        <h3>Caso 4</h3>
+        <p>Si <strong>b=c=0</strong>,la ecuacion es:</p>
+        <img src="imagenes/ecuacioninc3.png" class="imagen">
+        <p>Sus raices seran iguales en 0.</p>
     </div>
 
     <div class="volver">

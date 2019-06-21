@@ -49,11 +49,6 @@ function dibujarfuncion() {
     ctx.stroke();
     ctx.closePath();
 }
-//Boton reiniciar
-function reiniciar()
-{
-    document.getElementsByName("rellenar").rellenar();
-}
 
 //Grilla
 function dibujargrilla() {
