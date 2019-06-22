@@ -35,16 +35,12 @@ function ecuacion(){
 
     var canvas = document.getElementById("mycanvas");
     ctx = canvas.getContext("2d");
-    ctx.lineWidth = 6;
-    ctx.strokeStyle = "#001f33";
+    ctx.lineWidht= 6;
+    ctx.strokeStyle= "#001f33";
     ctx.beginPath();
-    ctx.moveTo(document.getElementById("x1").value, 320);
-    ctx.quadraticCurveTo(document.getElementById("x1").value, 320, 200, document.getElementById(x2).value);
+    ctx.moveTo(document.getElementById("x1").value,canvas.width/2);
+    ctx.quadraticCurveTo(canvas.height/2,document.getElementById("vi").value,document.getElementById("x2").value,canvas.width/2);
     ctx.stroke();
-<<<<<<< HEAD
-=======
-    ctx.closePath();
->>>>>>> b895200918230d777f1e7fa6b2dd6f4b9e33359c
 }
 
 //Grilla
