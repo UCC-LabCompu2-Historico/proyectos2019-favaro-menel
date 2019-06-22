@@ -17,6 +17,7 @@ body{
     font-size: 30px;
     font-style: oblique;
 }
+
 /*Botón Práctico*/
 .practico{
     height: 50px;
@@ -25,6 +26,7 @@ body{
     font-weight: bold;
     margin-top: 10%;
 }
+
 /*Botón Teórico*/
 .teorico{
     height: 50px;
@@ -41,8 +43,6 @@ body{
 .output {
     margin-left: 5%;
 }
-
-/*Gráfico del práctico*/
 
 /*Gráfico del teórico*/
 .graficot{

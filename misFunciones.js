@@ -32,27 +32,15 @@ function ecuacion(){
 
     document.getElementById("x1").value = x1;
     document.getElementById("x2").value = x2;
-}
 
-function dibujarfuncion() {
-    var canvas=document.getElementById("mycanvas");
-    var ctx=canvas.getContext("2d");
-    /*var y;
-    var a = Number(document.rellenar.vc.value);
-    var b = Number(document.rellenar.vl.value);
-    var c = Number(document.rellenar.vi.value);*/
+    var canvas = document.getElementById("mycanvas");
+    ctx = canvas.getContext("2d");
+    ctx.lineWidth = 6;
+    ctx.strokeStyle = "#001f33";
     ctx.beginPath();
-    ctx.moveTo(50,20);
-    ctx.quadraticCurveTo(20,100,200,20);
-    ctx.lineWidth= 5;
-    ctx.strokeStyle="#000";
+    ctx.moveTo(document.getElementById("x1").value, 320);
+    ctx.quadraticCurveTo(document.getElementById("x1").value, 320, 200, document.getElementById(x2).value);
     ctx.stroke();
-    ctx.closePath();
-}
-//Boton reiniciar
-function reiniciar()
-{
-    document.getElementsByName("rellenar").rellenar();
 }
 
 //Grilla
@@ -73,7 +61,7 @@ function dibujargrilla() {
         ctx.lineTo(t+10,canvas.height);
         ctx.stroke();
     }
-    ctx.closePath()
+    ctx.closePath();
 
     ctx.beginPath();
     ctx.moveTo(0,canvas.height/2);

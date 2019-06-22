@@ -6,7 +6,7 @@
     <script type="text/javascript" src="misFunciones.js"></script>
     <title>Práctico</title>
 </head>
-<body onload="dibujargrilla()" onload="dibujarfuncion()">
+<body onload="dibujargrilla()">
 
     <div id="titulo">
         <header>
@@ -14,16 +14,17 @@
         </header>
     </div>
 
-    <form action="#" name="rellenar">
+    <form action="#" name="rellenar" id="rellenar">
         <h2>Ingrese las variables:</h2>
         <div id="variables">
             <p><input type="text" size="2" id="vc" name="vc"> X<sup>2</sup>+<input type="text" size="2" id="vl" name="vl"> X+<input type="text" size="2" id="vi" name="vi">=0</p>
         </div>
     <h1><input type="button" value="Calcular" onclick="ecuacion()"></h1>
+        <h1><input type="button" value="Graficar" onclick="dibujarfuncion()"></h1>
     </form>
 
 
-        <div id="raices" name="rellenar">
+        <div id="raices">
         <h3>Resultado:</h3>
         <p>X1=<input disabled="disabled" size="3" id="x1"></p>
         <p>X2=<input disabled="disabled" size="3" id="x2"></p>
@@ -31,8 +32,6 @@
 
         <canvas id="mycanvas" class="graficot" width="640" height="400">
         </canvas>
-
-    <h1><input type="button" value="Reiniciar" class="opciones" onclick="reiniciar()"></h1>
 
     <div class="volver">
         <a href="inicio.html">Inicio</a>
