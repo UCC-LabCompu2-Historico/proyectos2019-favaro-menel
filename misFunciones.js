@@ -30,8 +30,8 @@ function ecuacion(){
         }
     }
 
-    document.getElementById("x1").value = x1;
-    document.getElementById("x2").value = x2;
+    document.getElementById("x1").value = Number(x1.toFixed(2));
+    document.getElementById("x2").value = Number(x2.toFixed(2));
 
     var canvas = document.getElementById("mycanvas");
     ctx = canvas.getContext("2d");
