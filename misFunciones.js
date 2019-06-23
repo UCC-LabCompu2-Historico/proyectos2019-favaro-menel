@@ -42,7 +42,6 @@ function ecuacion(){
     ctx.stroke();
 }
 
-//Grilla
 function dibujargrilla() {
     var canvas=document.getElementById("mycanvas");
     var ctx=canvas.getContext("2d");
@@ -75,9 +74,9 @@ function dibujargrilla() {
     ctx.closePath();
 }
 
-function validanumero(numero)
-{
-    if (!/^([0-9])*$/.test(numero)){
+function validanumero(elemento){
+    if (!/^([0-9])*$/.test(elemento.value)){
         alert("Ingrese solo numeros");
+        elemento.value = '';
     }
 }

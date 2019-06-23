@@ -17,7 +17,7 @@
     <form action="#" name="rellenar">
         <h3>Ingrese las variables:</h3>
         <div id="variables">
-            <p><input type="text" size="2" id="vc" name="vc" onblur="return validanumero(this.value)" > X<sup>2</sup>+<input type="text" size="2" id="vl" name="vl" onblur="return validanumero(this.value)" > X+<input type="text" size="2" id="vi" name="vi" onblur="return validanumero(this.value)" >=0</p>
+            <p><input type="text" size="2" id="vc" name="vc" onchange="return validanumero(this)" > X<sup>2</sup>+<input type="text" size="2" id="vl" name="vl" onchange="return validanumero(this)" > X+<input type="text" size="2" id="vi" name="vi" onchange="return validanumero(this)" >=0</p>
         </div>
     <h1><input type="button" value="Calcular" onclick="ecuacion()"></h1>
     </form>
