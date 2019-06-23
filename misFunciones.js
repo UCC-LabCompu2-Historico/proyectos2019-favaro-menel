@@ -75,7 +75,7 @@ function dibujargrilla() {
 }
 
 function validanumero(elemento){
-    if (!/^([0-9])*$/.test(elemento.value)){
+    if (!/^([0-9\-])*$/.test(elemento.value)){
         alert("Ingrese solo numeros");
         elemento.value = '';
     }
