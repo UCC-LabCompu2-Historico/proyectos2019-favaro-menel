@@ -25,8 +25,7 @@ function ecuacion(){
         }
         if (d<0)
         {
-            var x1=0;
-            var x2=0;
+            alert("Raices Imaginarias");
         }
     }
 
@@ -74,4 +73,11 @@ function dibujargrilla() {
     ctx.lineTo(canvas.width/2,canvas.height);
     ctx.stroke();
     ctx.closePath();
+}
+
+function validanumero(numero)
+{
+    if (!/^([0-9])*$/.test(numero)){
+        alert("Ingrese solo numeros");
+    }
 }
