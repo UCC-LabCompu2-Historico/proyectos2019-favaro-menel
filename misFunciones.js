@@ -36,12 +36,50 @@ function ecuacion(){
     ctx = canvas.getContext("2d");
     ctx.lineWidht= 6;
     ctx.strokeStyle= "#001f33";
+
+    var y;
+    var dibX, dibY;
+
     ctx.beginPath();
-    ctx.moveTo(document.getElementById("x1").value,canvas.width/2);
-    ctx.quadraticCurveTo(canvas.height/2,document.getElementById("vi").value,document.getElementById("x2").value,canvas.width/2);
-    ctx.stroke();
+    for(var i=-32; i<=32; i++){
+        console.log("valor X: " + i);
+        y=i*i*a+b*i+c;
+        console.log("valor y: " + y);
+
+        if(y<=20){
+            console.log("Entro al if");
+            dibX = transX(i);
+            dibY = transY(y);
+            console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+            ctx.arc(dibX, dibY, 5, 0, 2 * Math.PI);
+            ctx.moveTo(dibX, dibY);
+            i=i++;
+            y=i*i*a+b*i+c;
+            dibX = transX(i);
+            dibY = transY(y);
+            ctx.lineTo(dibX, dibY);
+            ctx.stroke();
+        }
+    }
+
 }
 
+function transY(coorY) {
+    var trY = -(coorY-20)*10;
+
+    return trY;
+}
+
+function transX(coorX) {
+    var trX = (coorX+32)*10;
+
+    return trX;
+}
+
+/**
+ * Dibuja la cuadrilla sobre el canvas
+ * @method dibujargrilla
+ */
 function dibujargrilla() {
     var canvas=document.getElementById("mycanvas");
     var ctx=canvas.getContext("2d");
