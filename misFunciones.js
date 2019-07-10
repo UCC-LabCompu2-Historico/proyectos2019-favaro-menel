@@ -1,3 +1,11 @@
+/**
+ * Calcula las raíces, los vértices y dibuja la función.
+ * @method ecuacion
+ * @param Variable cuadrática
+ * @param Variable lineal
+ * @param Variable independiente
+ * @returns Raíces (x1 y x2) y vértices (vx y vy)
+ */
 function ecuacion(){
     resultados = document.getElementById("raices");
 
@@ -31,6 +39,12 @@ function ecuacion(){
 
     document.getElementById("x1").value = Number(x1.toFixed(2));
     document.getElementById("x2").value = Number(x2.toFixed(2));
+
+    var vx = -b/2*a;
+    var vy = a*(Math.pow(vx,2))+b*vx+c;
+
+    document.getElementById("vx").value = Number(vx);
+    document.getElementById("vy").value = Number(vy);
 
     var canvas = document.getElementById("mycanvas");
     ctx = canvas.getContext("2d");
@@ -112,9 +126,53 @@ function dibujargrilla() {
     ctx.closePath();
 }
 
+/**
+ * Prohibe el ingreso de letras y/o carácteres especiales.
+ * @method validanumero
+ * @param {*} elemento 
+ */
 function validanumero(elemento){
     if (!/^([0-9\-])*$/.test(elemento.value)){
         alert("Ingrese solo numeros");
         elemento.value = '';
     }
+}
+
+/**
+ * Borra el Canvas y dibuja los ejes sobre la grilla
+ * @method limpiar
+ */
+function limpiar() {
+    //Limpia el Canvas
+    var canvas = document.getElementById("mycanvas");
+    var contexto = canvas.getContext("2d");
+    contexto.clearRect(0, 0, canvas.width, canvas.height);
+
+    //Vuelve a dibujar la grilla y los ejes
+    ctx.beginPath();
+    for(let i=0;i<canvas.height;i+=10){
+        ctx.moveTo(0,i+10);
+        ctx.strokeStyle="#9c9c9c";
+        ctx.lineTo(canvas.width,i+10);
+        ctx.stroke();
+    }
+    for(let t=0;t<canvas.width;t+=10){
+        ctx.moveTo(t+10,0);
+        ctx.strokeStyle="#9c9c9c";
+        ctx.lineTo(t+10,canvas.height);
+        ctx.stroke();
+    }
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(0,canvas.height/2);
+    ctx.strokeStyle="#000";
+    ctx.lineTo(canvas.width, canvas.height/2);
+    ctx.stroke();
+
+    ctx.moveTo(canvas.width/2,0);
+    ctx.strokeStyle="#000";
+    ctx.lineTo(canvas.width/2,canvas.height);
+    ctx.stroke();
+    ctx.closePath();
 }
